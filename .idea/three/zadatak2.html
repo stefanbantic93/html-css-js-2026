@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, sans-serif;
+            background: #fff8e7;
+            padding: 30px;
+        }
+        .container{
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        }
+        img{
+            width: 300px;
+            border-radius: 10px;
+            display: block;
+        }
+        h1{
+            color: #d35400;
+        }
+        a{
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th,td{
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            background: #f39c12;
+            color:white;
+        }
+        button{
+            padding: 10px 15px;
+            margin-top: 15px;
+            border: none;
+            background: #27ae60;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover{
+            background: #1e8449;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Moj omiljeni bend</h1>
+    <img id="bandImage"
+         alt="Bend"
+         src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/U2_on_Joshua_Tree_Tour_2017_Brussels_8-1-17.jpg/1920px-U2_on_Joshua_Tree_Tour_2017_Brussels_8-1-17.jpg">
+    <p>
+        Posjeti njihovu <a href="https://www.youtube.com/channel/UC4gPNusMDwx2Xm-YI35AkCA" target="_blank">YouTube
+        stranicu</a>
+    </p>
+    <h2>Top Pjesme</h2>
+    <table>
+        <tr>
+            <th>Redni broj</th>
+            <th>Naziv pjesme</th>
+            <th>Ocjena</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>With or Without You</td>
+            <td>10/10</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Beautiful Day</td>
+            <td>9/10</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>One</td>
+            <td>10/10</td>
+        </tr>
+    </table>
+    <button onclick="promijeniSliku()">Promijeni Sliku</button>
+</div>
+<script>
+
+    let firstPicture = true;
+    function promijeniSliku(){
+        const img = document.getElementById("bandImage");
+        if(firstPicture){
+            img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Dave_and_U2_in_studio%2C_1982.jpg/1280px-Dave_and_U2_in_studio%2C_1982.jpg";
+        }else{
+            img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/U2_on_Joshua_Tree_Tour_2017_Brussels_8-1-17.jpg/1920px-U2_on_Joshua_Tree_Tour_2017_Brussels_8-1-17.jpg";
+        }
+        firstPicture = !firstPicture;
+    }
+</script>
+</body>
+</html>

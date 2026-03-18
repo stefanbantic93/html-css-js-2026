@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Automobili Auto">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            padding: 30px;
+        }
+        .card{
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+        h1{
+            color:#2c3e50;
+        }
+        ul, ol{
+            background: #eef3ff;
+            padding: 15px 30px;
+            border-radius: 10px;
+        }
+        button{
+            padding: 10px 16px;
+            border: none;
+            background: #3498db;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover{
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>Moja Top Lista</h1>
+    <p>Najdraže grickalice za coding sesiju:</p>
+    <ul id="snackList">
+        <li>Čips</li>
+        <li>Smoki</li>
+        <li>Čokolada</li>
+    </ul>
+    <p>Top 3 filma:</p>
+    <ol>
+        <li>Intersellar</li>
+        <li>Inception</li>
+        <li>The Dark Night</li>
+    </ol>
+
+    <button onclick="dodajSnack()">Dodaj novu grickalicu</button>
+</div>
+<script>
+    function dodajSnack(){
+        //ugrađena funkcija prompt("Unesi naziv grickalice");
+        let noviSnack = prompt("Unesi naziv grickalice:");
+        if(noviSnack!==null && noviSnack.trim()!==""){
+            let listItem = document.createElement("li");
+            listItem.textContent=noviSnack;
+            const unorderedList = document.getElementById("snackList");
+            unorderedList.appendChild(listItem);
+        }
+    }
+</script>
+</body>
+</html>
+
