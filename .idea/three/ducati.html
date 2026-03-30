@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ducati pictures</title>
+    <style>
+        body{
+             font-family: Arial, sans-safir;
+             background: gray;
+             padding: 30px;
+        }
+        .container{
+                    max-width: 800px;
+                    margin: auto;
+                    background: gray;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 15 px rgba(0, 0, 0, 0.1);
+        }
+        .img{
+            width: 400px;
+            border-radius: 5px;
+            display: block;
+        }
+        h1{
+            color: red;
+        }
+        a{
+            color: blue;
+            text-decoration: none;
+            font-weigght: bold;
+        }
+        a:hover{
+                text-decoration:underline;
+        }
+        table{
+              width: 100%;
+              border-collapse: collapse;
+              margine-top: 15px;
+        }
+        th,td{
+              padding: 10px;
+              text-align: center;
+              background: #A9A9A9;
+        }
+        button{
+            padding: 5px 5px;
+            margin-top: 10px;
+            background: gray;
+            color: black;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover{
+            background: darkgray;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+        <div class="container">
+            <h1>Ducati motobike models</h1>
+            <img id="bikeImage"
+                 alt="Bike"
+            src="./images/Ducati-Lineup.jpg">
+        <br>
+            <p>
+                Visit their <a href="https://www.ducati.com/ww/en/home" target="blank"> Ducati web site</a>
+            </p>
+            <h2>Top three bikes</h2>
+            <table>
+                <tr>
+                    <th>Bike model</th>
+                    <th>Bike engine ccm</th>
+                    <th>Top speed</th>
+                </tr>
+                <tr>
+                    <td>Panigale v4</td>
+                    <td>999 cc</td>
+                    <td>299 km/h</td>
+                </tr>
+                <tr>
+                    <td>Multistrada</td>
+                    <td>1103 cc</td>
+                    <td>250 km/h</td>
+                </tr>
+                <tr>
+                    <td>Speciale stradale v4</td>
+                    <td>1103 cc</td>
+                    <td>322 km/h</td>
+                </tr>
+            </table>
+        <button onclick="changeImage()">Change Picture </button>
+        </div>
+        <script>
+
+            // Pravimo listu (niz) svih tvojih slika
+      const slike = [
+          "./images/Ducati-Lineup.jpg",
+          "./images/ducati_desertx.jpg",
+          "./images/ducati_hyper.jpg",
+          "./images/ducati_speciale.jpg"
+
+      ];
+
+      let trenutnaSlika = 0;
+
+      function changeImage() {
+          const img = document.getElementById("bikeImage");
+              trenutnaSlika++;
+              if (trenutnaSlika >= slike.length) {
+              trenutnaSlika = 0;
+          }
+          img.src = slike[trenutnaSlika];
+      }
+        </script>
+</body>
+</html>

@@ -1,4 +1,11 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+.idea
+vcs.xml
+modules.xml
+workspace.xml
+misc.xml
+html-css-js-2026.iml
+
 

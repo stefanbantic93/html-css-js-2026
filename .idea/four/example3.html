@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prijava za Gaming Turnir</title>
+    <link rel="stylesheet" href="example3.css">
+</head>
+<body>
+<div class="form-box">
+    <h1>Prijava na Gaming Turnir</h1>
+    <!--    <form action="#" method="POST">-->
+    <form onsubmit="prikaziPodatke(event)">
+        <label for="ime">Ime</label>
+        <input type="text" id="ime" required name="ime">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+        <label for="igra">Odaberi igru</label>
+        <select id="igra" name="igra">
+            <option value="cs2">CS2</option>
+            <option value="fifa">FIFA</option>
+            <option value="minecraft">Minecraft</option>
+            <option value="legends">League of Legends</option>
+        </select>
+
+        <label>Iskustvo</label>
+        <input class="inline" name="iskustvo" value="beginner" type="radio" checked>Početnik
+        <input class="inline" name="iskustvo" value="mid" type="radio">Srednji Nivo
+        <input class="inline" name="iskustvo" value="pro" type="radio">Pro
+
+        <label>
+            <input class="inline" type="checkbox" id="pravila" name="rulesAccepted">
+            Prihvatam pravila turnira
+        </label>
+
+        <label for="poruka">Poruka organizatoru</label>
+        <textarea id="poruka" rows="4" name="poruka"></textarea>
+
+        <!--        <input id="button" type="submit">-->
+        <button type="submit">Pošalji Prijavu</button>
+    </form>
+    <div id="rezultat">
+
+    </div>
+</div>
+<script src="example3.js"></script>
+</body>
+</html>

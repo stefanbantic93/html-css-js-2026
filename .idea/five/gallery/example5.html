@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija</title>
+    <style>
+        body{
+            text-align: centar;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fafafa;
+
+        }
+        img{
+            width: 400px;
+            border: 12px;
+        }
+        button{
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Mini Galerija</h1>
+    <img id="slika" src="https://img.freepik.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?semt=ais_hybrid&w=740&q=80">
+    <br>
+    <button onclick="prev()">Previous</button>
+    <button onclick="next()">Next</button>
+    
+    
+        <script>
+            let index = 0;
+            let slike = ["1.JPG","2.JPG","3.JPG"];
+            function next(){
+                index=index+1;
+
+            }
+    </script>
+    
+</body>
+</html>

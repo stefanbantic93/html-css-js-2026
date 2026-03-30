@@ -1,0 +1,77 @@
+body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f0f3f7;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-left: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 8px 12px;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        input {
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            transition: 0.2s;
+        }
+
+        input:focus {
+            border-color: #4CAF50;
+            outline: none; /** ovo je ključ da radi **/
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        li{
+            margin: 8px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li:hover{
+            background: #eef2f7;
+        }
+
+        li button{
+            background: #ff4d4d;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            padding: 0px;
+            margin-left: 10px;
+        }
+
+        li button:hover{
+            background: #cc0000;
+        }
+
